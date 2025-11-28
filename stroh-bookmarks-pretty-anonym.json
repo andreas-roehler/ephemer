@@ -1,0 +1,83 @@
+{
+  "guid": "root________",
+  "title": "",
+  "index": 0,
+  "dateAdded": 1758007591731000,
+  "lastModified": 1759387531569000,
+  "id": 1,
+  "typeCode": 2,
+  "type": "text/x-moz-place-container",
+  "root": "placesRoot",
+  "children": [
+    {
+      "guid": "menu________",
+      "title": "Abarhild",
+      "index": 0,
+      "dateAdded": 1758007591731000,
+      "lastModified": 1759387531569000,
+      "id": 2,
+      "typeCode": 2,
+      "type": "text/x-moz-place-container",
+      "root": "bookmarksMenuFolder",
+      "children": [
+        {
+          "guid": "1srG5qBrKujW",
+          "title": "",
+          "index": 0,
+          "dateAdded": 1758094847697000,
+          "lastModified": 1758094847697000,
+          "id": 13,
+          "typeCode": 3,
+          "type": "text/x-moz-place-separator"
+        },
+        {
+          "guid": "pyLFuTW6aagk",
+          "title": "AbarhildFMWpOK",
+          "index": 1,
+          "dateAdded": 1260803621000000,
+          "lastModified": 1759127932902000,
+          "id": 14,
+          "typeCode": 2,
+          "type": "text/x-moz-place-container",
+          "children": [
+            {
+              "guid": "SNLxpIlscl5o",
+              "title": "AbarhildRLu39n",
+              "index": 0,
+              "dateAdded": 1260803621000000,
+              "lastModified": 1748415193000000,
+              "id": 15,
+              "typeCode": 2,
+              "type": "text/x-moz-place-container",
+              "children": [
+                {
+                  "guid": "j9usKxw2uddO",
+                  "title": "AbarhildRLu39nsEWHx1",
+                  "index": 0,
+                  "dateAdded": 1260803621000000,
+                  "lastModified": 1260803621000000,
+                  "id": 16,
+                  "typeCode": 1,
+                  "type": "text/x-moz-place",
+                  "uri": "http:AbarhildRLu39nsEWHx1"
+                },
+                {
+                  "guid": "8ky8xK-sQx2Y",
+                  "title": "AbarhildOF9iYr",
+                  "index": 1,
+                  "dateAdded": 1260803621000000,
+                  "lastModified": 1260803621000000,
+                  "id": 17,
+                  "typeCode": 1,
+                  "iconUri": "fake-favicon-uri:http:AbarhildOF9iYr",
+                  "type": "text/x-moz-place",
+                  "uri": "http:AbarhildOF9iYr"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
