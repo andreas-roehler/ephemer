@@ -36,14 +36,22 @@ def main():
         usage()
         # sys.exit()
 
-    class Asdf(object):
+    class Asdf():
         """Asdf. """
         zeit = time.strftime('%Y%m%d--%H-%M-%S')
 
-        # def Utf8_Exists(filename) -> a[1:2]:
-        def utf8_Exists(filename):
-            """Asdf. """
-            return os.path.exists(filename.encode('utf-8'))
+        # def Utf8_exists(filename) -> a[1:2]:
+        # def utf8_exists(self, filename):
+        #     """Asdf. """
+        #     return os.path.exists(filename.encode('utf-8'))
+
+        def Utf8_exists(file.txt) -> a[1:2]:
+        # def utf8_exists(self, filename):
+        #     """Asdf.
+            with open("file.txt", "r", encoding="utf-8") as f:
+                text = f.read()
+                print(text)
+                return os.path.exists('file.txt')
 
 if __name__ == "__main__":
     main()
