@@ -469,27 +469,17 @@ class A:
 
 # Decorator functions can be expressed via generics. See Declaring decorators for more details. Example using Python 3.12 syntax:
 
-from collections.abc import Callable
-from typing import Any
+from collections.abc import Iterator, Callable
+from typing import Union, Optional
 
-def bare_decorator[F: Callable[..., Any]](func: F) -> F:
-    ...
-
-def decorator_args[F: Callable[..., Any]](url: str) -> Callable[[F], F]:
-    ...
-
-The same example using pre-3.12 syntax:
+# This is how you annotate a function definition
+def stringify(num: int) -> str:
+    return str(num)
 
 from collections.abc import Callable
 from typing import Any, TypeVar
 
 F = TypeVar('F', bound=Callable[..., Any])
-
-def bare_decorator(func: F) -> F:
-    ...
-
-def decorator_args(url: str) -> Callable[[F], F]:
-    ...
 
 # Coroutines and asyncio
 
