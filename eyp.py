@@ -45,14 +45,19 @@ def main():
         #     """Asdf. """
         #     return os.path.exists(filename.encode('utf-8'))
 
-    def Utf8_exists(self, filename: str) -> bool:
+    def utf8_exists(self, filename: str) -> bool:
         """Check if file exists and can be read as UTF-8."""
+        print(self.zeit)
         try:
             with open(filename, "r", encoding="utf-8") as f:
                 f.read()
             return os.path.exists(filename)
         except (FileNotFoundError, UnicodeDecodeError):
             return False
+
+    def foo (self):
+        pass
+
 
 if __name__ == "__main__":
     main()
@@ -452,7 +457,7 @@ else:
 # Use Iterable for generic iterables (anything usable in "for"),
 # and Sequence where a sequence (supporting "len" and "__getitem__") is
 # required
-def f(ints: Iterable[int]) -> list[str]:
+def foo2(ints: Iterable[int]) -> list[str]:
     """mypy will infer the correct types for these instance variables
          based on the types of the parameters."""
 
