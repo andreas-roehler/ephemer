@@ -21,6 +21,7 @@ args = sys.argv
 # Get the name of the file to count the words in
 
 def usage():
+    """Print Fehler. """
     print("""Fehler: %s
 Es muß die aufzurufende Ziehungszahl als Argument angegeben werden:
 'python roulette.py 1, 'python roulette.py 2', ... 'python roulette.py n'.
@@ -28,6 +29,7 @@ Es muß die aufzurufende Ziehungszahl als Argument angegeben werden:
           os.path.basename(sys.argv[0])))
 
 def main():
+    """Some main. """
     if len(sys.argv) == 1:
         usage()
         # sys.exit()
@@ -52,6 +54,7 @@ except:
 
 # class kugel(object) -> a[1:2]:
 class kugel(object):
+    """Class kugel. """
     zeit = time.strftime('%Y%m%d--%H-%M-%S')
     # zeit = time.strftime('%Y-%m-%d--%H-%M-%S')
     spiel = []
@@ -184,7 +187,9 @@ x: bool = True
 x: str = "test"
 x: bytes = b"test"
 
-# For collections on Python 3.9+, the type of the collection item is in brackets
+# For collections on Python 3.9+, the type of the collection item is in
+# brackets
+
 x: list[int] = [1]
 x: set[int] = {6, 7}
 
@@ -231,10 +236,12 @@ from typing import Union, Optional
 
 # This is how you annotate a function definition
 def stringify(num: int) -> str:
+    """Sgring"""
     return str(num)
 
 # And here's how you specify multiple arguments
 def plus(num1: int, num2: int) -> int:
+    """Ring. """
     return num1 + num2
 
 # If a function does not return a value, use None as the return type
@@ -254,6 +261,7 @@ def register(callback: Callable[[str], int]) -> None: ...
 # A generator function that yields ints is secretly just a function that
 # returns an iterator of ints, so that's how we annotate it
 def gen(n: int) -> Iterator[int]:
+    """Gen. """
     i = 0
     while i < n:
         yield i
@@ -292,24 +300,32 @@ def call(self, *args: str, **kwargs: str) -> str:
 from typing import ClassVar
 
 class BankAccount:
-    # The "__init__" method doesn't return anything, so it gets return
-    # type "None" just like any other method that doesn't return anything
+    """The "__init__" method doesn't return anything, so it gets return
+     type "None" just like any other method that doesn't return anything_"""
     def __init__(self, account_name: str, initial_balance: int = 0) -> None:
-        # mypy will infer the correct types for these instance variables
-        # based on the types of the parameters.
+        """mypy will infer the correct types for these instance variables
+         based on the types of the parameters."""
         self.account_name = account_name
         self.balance = initial_balance
 
     # For instance methods, omit type for "self"
     def deposit(self, amount: int) -> None:
+        """mypy will infer the correct types for these instance variables
+         based on the types of the parameters."""
+
         self.balance += amount
 
     def withdraw(self, amount: int) -> None:
+        """mypy will infer the correct types for these instance variables
+         based on the types of the parameters."""
+
         self.balance -= amount
 
 # User-defined classes are valid as types in annotations
 account: BankAccount = BankAccount("Alice", 400)
 def transfer(src: BankAccount, dst: BankAccount, amount: int) -> None:
+    """mypy will infer the correct types for these instance variables
+         based on the types of the parameters."""
     src.withdraw(amount)
     dst.deposit(amount)
 
@@ -319,14 +335,23 @@ class AuditedBankAccount(BankAccount):
     audit_log: list[str]
 
     def __init__(self, account_name: str, initial_balance: int = 0) -> None:
+        """mypy will infer the correct types for these instance variables
+         based on the types of the parameters."""
+
         super().__init__(account_name, initial_balance)
         self.audit_log: list[str] = []
 
     def deposit(self, amount: int) -> None:
+        """mypy will infer the correct types for these instance variables
+         based on the types of the parameters."""
+
         self.audit_log.append(f"Deposited {amount}")
         self.balance += amount
 
     def withdraw(self, amount: int) -> None:
+        """mypy will infer the correct types for these instance variables
+         based on the types of the parameters."""
+
         self.audit_log.append(f"Withdrew {amount}")
         self.balance -= amount
 
@@ -335,12 +360,18 @@ transfer(audited, account, 100)  # type checks!
 
 # You can use the ClassVar annotation to declare a class variable
 class Car:
+    """mypy will infer the correct types for these instance variables
+         based on the types of the parameters."""
+
     seats: ClassVar[int] = 4
     passengers: ClassVar[list[str]]
 
 # If you want dynamic attributes on your class, have it
 # override "__setattr__" or "__getattr__"
 class A:
+    """mypy will infer the correct types for these instance variables
+         based on the types of the parameters."""
+
     # This will allow assignment to any A.x, if x is the same type as "value"
     # (use "value: Any" to allow arbitrary types)
     def __setattr__(self, name: str, value: int) -> None: ...
@@ -392,20 +423,26 @@ if TYPE_CHECKING:
 else:
     import orjson as json  # mypy is unaware of this
 
-# In some cases type annotations can cause issues at runtime, see Annotation issues at runtime for dealing with this.
+# In some cases type annotations can cause issues at runtime, see
+# Annotation issues at runtime for dealing with this.
 
 # See Silencing type errors for details on how to silence errors.
 # Standard “duck types”
 
-# In typical Python code, many functions that can take a list or a dict as an argument only need their argument to be somehow “list-like” or “dict-like”. A specific meaning of “list-like” or “dict-like” (or something-else-like) is called a “duck type”, and several duck types that are common in idiomatic Python are standardized.
-
-from collections.abc import Mapping, MutableMapping, Sequence, Iterable
-# or 'from typing import ...' (required in Python 3.8)
+# In typical Python code, many functions that can take a list or a
+# dict as an argument only need their argument to be somehow
+# “list-like” or “dict-like”. A specific meaning of “list-like” or
+# “dict-like” (or something-else-like) is called a “duck type”, and
+# several duck types that are common in idiomatic Python are
+# standardized.
 
 # Use Iterable for generic iterables (anything usable in "for"),
 # and Sequence where a sequence (supporting "len" and "__getitem__") is
 # required
 def f(ints: Iterable[int]) -> list[str]:
+    """mypy will infer the correct types for these instance variables
+         based on the types of the parameters."""
+
     return [str(x) for x in ints]
 
 f(range(1, 3))
@@ -419,6 +456,8 @@ def f(my_mapping: Mapping[int, str]) -> list[int]:
 f({3: 'yes', 4: 'no'})
 
 def f(my_mapping: MutableMapping[int, str]) -> set[str]:
+    """mypy will infer the correct types for these instance variables
+         based on the types of the parameters."""
     my_mapping[5] = 'maybe'  # ...but mypy is OK with this.
     return set(my_mapping.values())
 
@@ -431,6 +470,8 @@ from typing import IO
 # objects that come from an open() call (note that IO does not
 # distinguish between reading, writing or other modes)
 def get_sys_IO(mode: str = 'w') -> IO[str]:
+    """mypy will infer the correct types for these instance variables
+         based on the types of the parameters."""
     if mode == 'w':
         return sys.stdout
     elif mode == 'r':
@@ -444,25 +485,27 @@ def get_sys_IO(mode: str = 'w') -> IO[str]:
 # You may want to reference a class before it is defined.
 # This is known as a "forward reference".
 def f(foo: A) -> int:  # This will fail at runtime with 'A' is not defined
-    ...
+    """mypy will infer the correct types for these instance variables
+         based on the types of the parameters."""
+    pass
 
 # However, if you add the following special import:
 from __future__ import annotations
 # It will work at runtime and type checking will succeed as long as there
 # is a class of that name later on in the file
 def f(foo: A) -> int:  # Ok
-    ...
+    pass
 
 # Another option is to just put the type in quotes
 def f(foo: 'A') -> int:  # Also ok
-    ...
+    pass
 
 class A:
     # This can also come up if you need to reference a class in a type
     # annotation inside the definition of that class
     @classmethod
     def create(cls) -> A:
-        ...
+        pass
 
 # See Class name forward references for more details.
 # Decorators
@@ -572,7 +615,7 @@ class DataFrame(NDFrame, OpsMixin):
     3     3   3.0
     Constructing DataFrame from numpy ndarray:
     >>> df2 = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]),
-    ...                    columns=['a', 'b', 'c'])
+                        columns=['a', 'b', 'c'])
     >>> df2
        a  b  c
     0  1  2  3
@@ -580,9 +623,9 @@ class DataFrame(NDFrame, OpsMixin):
     2  7  8  9
     Constructing DataFrame from a numpy ndarray that has labeled columns:
     >>> data = np.array([(1, 2, 3), (4, 5, 6), (7, 8, 9)],
-    ...                 dtype=[("a", "i4"), ("b", "i4"), ("c", "i4")])
+                     dtype=[("a", "i4"), ("b", "i4"), ("c", "i4")])
     >>> df3 = pd.DataFrame(data, columns=['c', 'a'])
-    ...
+    
     >>> df3
        c  a
     0  3  1
