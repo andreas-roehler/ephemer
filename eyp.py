@@ -395,7 +395,7 @@ else:
 # In some cases type annotations can cause issues at runtime, see Annotation issues at runtime for dealing with this.
 
 # See Silencing type errors for details on how to silence errors.
-Standard “duck types”
+# Standard “duck types”
 
 # In typical Python code, many functions that can take a list or a dict as an argument only need their argument to be somehow “list-like” or “dict-like”. A specific meaning of “list-like” or “dict-like” (or something-else-like) is called a “duck type”, and several duck types that are common in idiomatic Python are standardized.
 
