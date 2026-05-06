@@ -51,15 +51,15 @@ def main():
             self.zeit = zeit
 
         @property
-        def zeit(self.zeit):
+        def zeit(self):
             """Asdf. """
             print(self.zeit)
-            return self._zeit
+            return self.zeit
 
         @property
-        def title(self.title):
+        def title(self):
             """Asdf. """
-            print(self.title)
+            print(self._title)
             return self._title
 
         @property
