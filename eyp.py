@@ -45,7 +45,7 @@ def main():
         #     """Asdf. """
         #     return os.path.exists(filename.encode('utf-8'))
 
-        def Utf8_exists(file.txt) -> a[1:2]:
+        def Utf8_exists('file.txt') -> a[1:2]:
         # def utf8_exists(self, filename):
         #     """Asdf.
             with open("file.txt", "r", encoding="utf-8") as f:
