@@ -45,13 +45,14 @@ def main():
         #     """Asdf. """
         #     return os.path.exists(filename.encode('utf-8'))
 
-        def Utf8_exists('file.txt') -> a[1:2]:
-        # def utf8_exists(self, filename):
-        #     """Asdf.
-            with open("file.txt", "r", encoding="utf-8") as f:
-                text = f.read()
-                print(text)
-                return os.path.exists('file.txt')
+    def Utf8_exists(self, filename: str) -> bool:
+        """Check if file exists and can be read as UTF-8."""
+        try:
+            with open(filename, "r", encoding="utf-8") as f:
+                f.read()
+            return os.path.exists(filename)
+        except (FileNotFoundError, UnicodeDecodeError):
+            return False
 
 if __name__ == "__main__":
     main()
