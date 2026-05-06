@@ -46,18 +46,24 @@ def main():
 
         @property
         def title(self):
+            """Asdf. """
+            print(zeit)
             return self._title
+
 
         @property
         def author(self):
+            """Asdf. """
             return self._author
 
         @property
         def price(self):
+            """Asdf. """
             return self._price
 
         @price.setter
         def price(self, price):
+            """Asdf. """
             if price >= 0:
                 self._price = price
             else:
@@ -79,5 +85,5 @@ def main():
                 return False
 
         def foo (self):
+            """Asdf. """
             pass
-
