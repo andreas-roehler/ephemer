@@ -1,6 +1,8 @@
 #! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+"""Blah blub: just a playground. """
+
 import os
 import pdb
 import random
@@ -34,11 +36,13 @@ def main():
         usage()
         # sys.exit()
 
-    class asdf(object):
+    class Asdf(object):
+        """Asdf. """
         zeit = time.strftime('%Y%m%d--%H-%M-%S')
 
         # def Utf8_Exists(filename) -> a[1:2]:
-        def Utf8_Exists(filename):
+        def utf8_Exists(filename):
+            """Asdf. """
             return os.path.exists(filename.encode('utf-8'))
 
 if __name__ == "__main__":
@@ -510,7 +514,8 @@ class A:
 # See Class name forward references for more details.
 # Decorators
 
-# Decorator functions can be expressed via generics. See Declaring decorators for more details. Example using Python 3.12 syntax:
+# Decorator functions can be expressed via generics. See Declaring
+# decorators for more details. Example using Python 3.12 syntax:
 
 from collections.abc import Iterator, Callable
 from typing import Union, Optional
@@ -526,7 +531,8 @@ F = TypeVar('F', bound=Callable[..., Any])
 
 # Coroutines and asyncio
 
-# See Typing async/await for the full detail on typing coroutines and asynchronous code.
+# See Typing async/await for the full detail on typing coroutines and
+#  asynchronous code.
 
 import asyncio
 
@@ -625,7 +631,7 @@ class DataFrame(NDFrame, OpsMixin):
     >>> data = np.array([(1, 2, 3), (4, 5, 6), (7, 8, 9)],
                      dtype=[("a", "i4"), ("b", "i4"), ("c", "i4")])
     >>> df3 = pd.DataFrame(data, columns=['c', 'a'])
-    
+
     >>> df3
        c  a
     0  3  1
@@ -641,4 +647,3 @@ class DataFrame(NDFrame, OpsMixin):
     2  2  3
     """
     pass
-
