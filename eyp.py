@@ -36,20 +36,31 @@ def main():
         usage()
         # sys.exit()
 
+    def __init__(self, account_name: str, initial_balance: int = 0) -> None:
+        """mypy will infer the correct types for these instance variables
+         based on the types of the parameters."""
+        self.account_name = account_name
+        self.balance = initial_balance
+        
     class Asdf():
         """Asdf. """
-        def __init__(self, title, author, price):
+        def __init__(self, title, author, price, zeit=time.strftime('%Y%m%d--%H-%M-%S')):
             self._title = title
             self._author = author
             self._price = price
-            zeit = time.strftime('%Y%m%d--%H-%M-%S')
+            self.zeit = zeit
 
         @property
-        def title(self):
+        def zeit(self.zeit):
             """Asdf. """
-            print(zeit)
-            return self._title
+            print(self.zeit)
+            return self._zeit
 
+        @property
+        def title(self.title):
+            """Asdf. """
+            print(self.title)
+            return self._title
 
         @property
         def author(self):
@@ -84,6 +95,6 @@ def main():
             except (FileNotFoundError, UnicodeDecodeError):
                 return False
 
-        def foo (self):
+        def foo1(self):
             """Asdf. """
-            pass
+            print('foo1')
