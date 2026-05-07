@@ -109,10 +109,10 @@ def main():
 
 # pdb.set_trace()
 try:
-    Anzahl = int(args[1])
+    ANZAHL = int(args[1])
 except:
-    print("Setze Anzahl auf 1")
-    Anzahl = 1
+    print("Setze ANZAHL auf 1")
+    ANZAHL = 1
 
 # class Kugel() -> a[1:2]:
 class Kugel():
@@ -124,11 +124,11 @@ class Kugel():
     rot = [1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36]
     schwarz = [2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35]
     ausgabe = []
-    treffer = None
+    # self.treffer = None
     fertig = ''
     treffer = random.randint(0, 36)
 
-    def pylauf(self):
+    def pylauf(self, treffer):
         """Eine Doku fuer pylauf"""
         ausgabe = [" "," "," "," "," "," "," "," ", " "]
 
@@ -170,31 +170,31 @@ class Kugel():
             else:
 
                 ausgabe[7] = treffer
-        ausgabe[8] = str(i+1)
-#        print("ausgabe: %s " % ausgabe)
-#        print("len(ausgabe): %s " % len(ausgabe))
+        # ausgabe[8] = str(i+1)
+#       print("ausgabe: %s " % ausgabe)
+#       print("len(ausgabe): %s " % len(ausgabe))
         for laenge in range(len(ausgabe)):
             fertig = fertig + ";" + str((ausgabe[laenge]))
         fertig = fertig[1:]
 #        print("fertig: %s " % fertig)
         spiel.append(fertig)
-        print("treffer: %s " % treffer)
+        print(f"treffer: {treffer}")
         return treffer
 #        print("len(spiel): %s " % len(spiel))
 
-zeitT = Kugel.zeitT
-ausgabeE = Kugel.ausgabe
-spiel = Kugel.spiel
-gruen = Kugel.gruen
-rot = Kugel.rot
-schwarz = Kugel.schwarz
-trefferR = Kugel.treffer
-fertigG = Kugel.fertig
+ZEITT = Kugel.ZEITT
+AUSGABEE = Kugel.ausgabe
+SPIEL = Kugel.spiel
+GRUEN = Kugel.gruen
+ROT = Kugel.rot
+SCHWARZ = Kugel.schwarz
+TREFFERR = Kugel.treffer
+FERTIGG = Kugel.fertig
 
 klauf = Kugel()
 
-# with file("roulette-" + zeitT + ".csv", 'w') as datei:
-#     for i in range(Anzahl):
+# with file("roulette-" + ZEITT + ".csv", 'w') as datei:
+#     for i in range(ANZAHL):
 #         klauf.pylauf()
 #         datei.write(str(spiel[i]) + " ")
 
