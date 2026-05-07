@@ -99,26 +99,26 @@ def main():
             """Asdf. """
             print('foo1')
 
-    a = Asdf.zeit
-    print(a)
+    aaa = Asdf.zeit
+    print(aaa)
     Asdf.foo1('')
 
     # >>> main()
     # <property object at 0x7254b1d47dd0>
     # foo1
 
-pdb.set_trace()
+# pdb.set_trace()
 try:
-    anzahl = int(args[1])
-except:
-    print("Setze anzahl auf 1")
-    anzahl = 1
+    Anzahl = int(args[1])
+except -> int:
+    print("Setze Anzahl auf 1")
+    Anzahl = 1
 
-# class kugel(object) -> a[1:2]:
-class kugel(object):
-    """Class kugel. """
-    zeit = time.strftime('%Y%m%d--%H-%M-%S')
-    # zeit = time.strftime('%Y-%m-%d--%H-%M-%S')
+# class Kugel() -> a[1:2]:
+class Kugel():
+    """Class Kugel. """
+    zeitT = time.strftime('%Y%m%d--%H-%M-%S')
+    # zeitT = time.strftime('%Y-%m-%d--%H-%M-%S')
     spiel = []
     gruen = [0]
     rot = [1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36]
@@ -182,19 +182,19 @@ class kugel(object):
         return treffer
 #        print("len(spiel): %s " % len(spiel))
 
-zeit = kugel.zeit
-ausgabe = kugel.ausgabe
-spiel = kugel.spiel
-gruen = kugel.gruen
-rot = kugel.rot
-schwarz = kugel.schwarz
-treffer = kugel.treffer
-fertig = kugel.fertig
+zeitT = Kugel.zeitT
+ausgabeE = Kugel.ausgabe
+spiel = Kugel.spiel
+gruen = Kugel.gruen
+rot = Kugel.rot
+schwarz = Kugel.schwarz
+trefferR = Kugel.treffer
+fertigG = Kugel.fertig
 
-klauf = kugel()
+klauf = Kugel()
 
-# with file("roulette-" + zeit + ".csv", 'w') as datei:
-#     for i in range(anzahl):
+# with file("roulette-" + zeitT + ".csv", 'w') as datei:
+#     for i in range(Anzahl):
 #         klauf.pylauf()
 #         datei.write(str(spiel[i]) + " ")
 
