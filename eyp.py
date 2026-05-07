@@ -22,26 +22,26 @@ args = sys.argv
 # pdb.set_trace()
 # Get the name of the file to count the words in
 
-def usage():
-    """Print Fehler. """
-    print("""Fehler: %s
-Es muß die aufzurufende Ziehungszahl als Argument angegeben werden:
-'python roulette.py 1, 'python roulette.py 2', ... 'python roulette.py n'.
-""" % (
-          os.path.basename(sys.argv[0])))
+# def usage():
+#     """Print Fehler. """
+#     print("""Fehler: %s
+# Es muß die aufzurufende Ziehungszahl als Argument angegeben werden:
+# 'python roulette.py 1, 'python roulette.py 2', ... 'python roulette.py n'.
+# """ % (
+#           os.path.basename(sys.argv[0])))
 
 def main():
     """Some main. """
-    if len(sys.argv) == 1:
-        usage()
+    # if len(sys.argv) == 1:
+    #     usage()
         # sys.exit()
 
-    def __init__(self, account_name: str, initial_balance: int = 0) -> None:
-        """mypy will infer the correct types for these instance variables
-         based on the types of the parameters."""
-        self.account_name = account_name
-        self.balance = initial_balance
-        
+    # def __init__(self, account_name: str, initial_balance: int = 0) -> None:
+    #     """mypy will infer the correct types for these instance variables
+    #      based on the types of the parameters."""
+    #     self.account_name = account_name
+    #     self.balance = initial_balance
+
     class Asdf():
         """Asdf. """
         def __init__(self, title, author, price, zeit=time.strftime('%Y%m%d--%H-%M-%S')):
@@ -99,3 +99,10 @@ def main():
             """Asdf. """
             print('foo1')
 
+    a = Asdf.zeit
+    print(a)
+    Asdf.foo1('')
+
+    # >>> main()
+    # <property object at 0x7254b1d47dd0>
+    # foo1
