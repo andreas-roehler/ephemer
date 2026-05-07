@@ -110,7 +110,7 @@ def main():
 # pdb.set_trace()
 try:
     Anzahl = int(args[1])
-except -> int:
+except:
     print("Setze Anzahl auf 1")
     Anzahl = 1
 
@@ -212,7 +212,7 @@ a, b, c = (1, 2, 3)
 a = b = c = 5
 [a, b, c] = 1, 2, 3
 a, *b, c = range(10)
-inst.a, inst.b, inst.c = 'foo', 'bar', 'baz'
+# inst.a, inst.b, inst.c = 'foo', 'bar', 'baz'
 (a, b, *c, d) = x, *y = 5, 6, 7, 8, 9
 
 print('%(language)s has %(number)03d quote types.' %
@@ -221,8 +221,8 @@ print('%(language)s has %(number)03d quote types.' %
 print("%(language)s has %(number)03d quote types." %
        {'language': "Python", "number": 4})
 
-(long, sequence, of_items,
-    that, needs, to_be, wrapped) = input_list
+# (long, sequence, of_items,
+#     that, needs, to_be, wrapped) = input_list
 
 if __name__ == "__main__":
     main()
